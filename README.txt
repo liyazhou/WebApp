@@ -1,6 +1,6 @@
 Spring 3.x MVC i18n SAMPLE
 
-AUTHOR : Tomofumi Kitano <tomofumikitano@gmail.com>
+AUTHOR : Tomofumi Kitano
 
 HISTORY :
 
