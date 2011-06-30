@@ -1,5 +1,5 @@
 /**
- * User: Tomofumi Kitano <tomofumikitano@gmail.com>
+ * User: Tomofumi Kitano
  * Date: 2011/07/01/
  */
 package tommons.web;
