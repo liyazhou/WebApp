@@ -34,8 +34,23 @@
 
     <bean id="handlerMapping"
           class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
-        <property name="interceptors">
-            <ref bean="localeChangeInterceptor"/>
+        <property name="interceptors" ref="localeChangeInterceptor"/>
+    </bean>
+    
+    <bean id="loginService" class="tommons.service.impl.InMemoryLoginService"/>
+    
+    <bean id="loginController" class="tommons.web.LoginController">
+        <constructor-arg ref="loginService"/>
+    </bean>
+    
+    <bean id="homeController" class="tommons.web.HomeController"/>
+
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <value>
+                /login.tm=loginController
+                /home.tm=homeController
+            </value>
         </property>
     </bean>
 
